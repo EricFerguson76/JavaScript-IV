@@ -22,10 +22,10 @@ class Instructor extends Person {
     this.catchPhrase = instructAttr.catchPhrase;
   }
   demo(subject) {
-    return `Today we are learning about ${this.subject}`;
+    return `Today we are learning about ${subject}`;
   }
   grade(name, subject) {
-    return `${this.name} reviews a perfect score on ${this.subject}`;
+    return `${this.name} reviews a perfect score on ${subject}`;
   }
 } // this closes instructor
 
@@ -40,7 +40,9 @@ class Student extends Person {
   }
 
   listsSubjects() {
-    return `${this.favSubjects[0]}, ${this.favSubjects[1]}, ${this.favSubjects[2]}`;
+    return `${this.favSubjects[0]}, ${this.favSubjects[1]}, ${
+      this.favSubjects[2]
+    }`;
   }
   PRAssignment(student, subject) {
     return `${student.name} has submitted a PR for ${subject}.`;
@@ -49,9 +51,6 @@ class Student extends Person {
     return `${student.name} has begun sprint challenge on ${subject}.`;
   }
 }
-
-
-
 // PROJECT MANAGER
 
 class ProjectManager extends Instructor {
@@ -67,8 +66,6 @@ class ProjectManager extends Instructor {
     return `${name} debugs ${student.name}'s code on ${subject}`;
   }
 }
-console.log(standUp())
-console.log(Albus.debugsCode('Ron', 'React'));
 
 // PERSON INFO
 
@@ -81,9 +78,8 @@ const Ginny = new Person({
 const Hermione = new Person({
   name: 'Hermione',
   age: 23,
-  location: 'Scotland',
+  location: 'Scotland'
 });
-
 
 // INSTRUCTOR INFO
 
@@ -105,7 +101,6 @@ const Minerva = new Instructor({
   catchPhrase: 'If you die, you need not hand it in.'
 });
 
-
 // STUDENT INFO
 const Harry = new Student({
   name: 'Harry',
@@ -113,9 +108,7 @@ const Harry = new Student({
   location: 'England',
   previousBackground: 'lived with aunt and uncle',
   className: 'cS120',
-  favSubjects: [
-    'HTML', 'CSS', 'JavaScript'
-  ],
+  favSubjects: ['HTML', 'CSS', 'JavaScript']
 });
 
 const Ron = new Student({
@@ -124,11 +117,8 @@ const Ron = new Student({
   location: 'Canada',
   previousBackground: 'lived with mum and dad',
   className: 'JS120',
-  favSubjects: [
-    'React', 'Python', 'JavaScript'
-  ],
+  favSubjects: ['React', 'Python', 'JavaScript']
 });
-
 
 // PROJECT MANAGERS
 
@@ -140,7 +130,7 @@ const Albus = new ProjectManager({
   favLanguage: 'Java',
   catchPhrase: 'It does not do to dwell on dreams and forget to live.',
   gradeClassName: 'DS3',
-  favInstructor: 'Hagrid',
+  favInstructor: 'Hagrid'
 });
 
 const Flitwick = new ProjectManager({
@@ -151,10 +141,9 @@ const Flitwick = new ProjectManager({
   favLanguage: 'React',
   catchPhrase: 'Keep the shiny side up.',
   gradeClassName: 'CS2',
-  favInstructor: 'Lupin',
+  favInstructor: 'Lupin'
 });
 
 // CONSOLE LOGS
-
-console.log(Ginny.speak())
-console.log(Hermione.speak())
+console.log(Ginny.speak());
+console.log(Hermione.speak());
